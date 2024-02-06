@@ -1,5 +1,6 @@
 # OkServer!
 _OkServer!_, or _OkS!_ for short, is a Go-based HTTP web server aimed to be lightweight, clean, and straightforward.
+<img src="OkS.svg" width="300px" />
 
 ## Installation
 1. Run ```git clone https://github.com/OkSProject/OkServer.git```
@@ -11,3 +12,6 @@ _OkServer!_, or _OkS!_ for short, is a Go-based HTTP web server aimed to be ligh
 - Ability to manage use/manage database(s).
 - Ability to create .conf files for individual sites.
 - Service to allow OkS! to run in background.
+
+## Credits
+_OkServer_ and the _OsK!_ Project were started by Cole Rathbun (@cbrbygones), and is licensed under GPLv3 for anyone to use, modify, and redistribute.
