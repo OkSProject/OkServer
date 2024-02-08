@@ -1,6 +1,6 @@
 /*
 	 OkServer! (OkS!) - An ok, lightweight, clean, and straightforward HTTP server!
-    Copyright (C) 2024  Cole Rathbun <lowcr@proton.me>
+    Copyright (C) 2024  The OkS! Project <https://okserver.xyz>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
