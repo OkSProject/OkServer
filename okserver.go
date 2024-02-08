@@ -26,19 +26,44 @@ import (
 	"os"
 )
 
+func getLogDir() string {
+	d := os.Getenv("OKSERVER_LOG_DIR")
+	if d == "" {
+		d = "./log/"
+	}
+	return d
+}
+
+func getAssetDir() string {
+	d := os.Getenv("OKSERVER_ASSET_DIR")
+	if d == "" {
+		d = "./www/html/"
+	}
+	return d
+}
+
+func getListenPort() string {
+	p := os.Getenv("OKSERVER_PORT")
+	if p == "" {
+		p = "8080"
+	}
+	return p
+}
+
 func main() {
 
 	// Creates /log directory to store server logs.
 	// Exits if an error occurs with the directory creation.
-	err := os.MkdirAll("./log", os.ModePerm)
+	logDir := getLogDir()
+	err := os.MkdirAll(logDir, os.ModePerm)
 	if err != nil {
-		log.Fatal("Error creating /log directory: ", err)
+		log.Fatalf("Error creating log directory %s: %e", logDir, err)
 	}
 
 	// Creates or opens `server.log` for writing purposes.
 	// Exits if an error occurs while opening the log file.
 	// Closes the log file once done and sets log_file as the output.
-	log_file, err := os.OpenFile("./log/okserver.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	log_file, err := os.OpenFile(logDir+"okserver.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		log.Fatal("Error opening log file: ", err)
 	}
@@ -49,20 +74,19 @@ func main() {
 	log.SetOutput(mw_log)
 
 	// Serves site(s) from directory "/".
-	dir := "./www/html/"
+	dir := getAssetDir()
 	file_server := http.FileServer(http.Dir(dir))
 	http.Handle("/", file_server)
 
 	// Sets server to listen on Port 8080.
-	port := 8080
+	port := getListenPort()
 
 	// Starts server.
-	log.Printf("OkServer! Running on: %d...\n", port)
+	log.Printf("OkServer! Running on: %s...\n", port)
 
 	// Error checking
 	// Sets "err" to the output of the HTTP server when it starts.
-	err = http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
-	if err != nil {
+	if err := http.ListenAndServe(fmt.Sprintf(":%s", port), nil); err != nil {
 		log.Println("Error: ", err)
 	}
 }
