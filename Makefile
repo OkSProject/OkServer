@@ -4,13 +4,13 @@ export
 all: build
 .PHONY: run
 
-build: okserver.go
-	go build -o build/okserver okserver.go
+build: main.go
+	go build -o bin/okserver main.go
 run:
-	go run okserver.go
+	go run main.go
 install:
 	mkdir -p /opt/okserver
-	cp build/okserver /usr/bin
+	cp bin/okserver /usr/bin
 	cp -r www /opt/okserver
 	if [ ! -e /opt/okserver/env ]; then cp deployment/example.env /opt/okserver/env; fi
 	adduser --system --no-create-home --group okserver
