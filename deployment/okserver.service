@@ -1,0 +1,17 @@
+[Unit]
+Description=Ok Server! HTTP Server
+After=network.service
+
+[Service]
+User=okserver
+Group=okserver
+ExecStart=/usr/bin/okserver
+EnvironmentFile=/opt/okserver/env
+RestartSec=10
+Restart=always
+SystemCallArchitectures=native
+MemoryDenyWriteExecute=true
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
