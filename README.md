@@ -36,7 +36,6 @@ Configuration is done via environmental variables.
 - Serve PHP, Python, and Go files.
 - Ability to manage use/manage database(s).
 - Ability to create .conf files for individual sites.
-- Service to allow OkS! to run in background.
 
 ## Credits
 _OkServer!_ and the _OkS!_ Project were started by Cole Rathbun (@cbrbygones), and is licensed under GPLv3 for anyone to use, modify, and redistribute.
