@@ -4,9 +4,8 @@ After=network.service
 
 [Service]
 User=okserver
-Group=okserver
 ExecStart=/usr/bin/okserver
-EnvironmentFile=/opt/okserver/env
+EnvironmentFile=/home/okserver/http/env
 RestartSec=10
 Restart=always
 SystemCallArchitectures=native
