@@ -11,10 +11,10 @@ _OkServer!_, or _OkS!_ for short, is a Go-based HTTP web server aimed to be ligh
 ## Installation
     make && sudo make install
 
-This copies the asset directory to `/opt/okserver`, along with the example env file and
-creates a system user `okserver` to run the service. 
+This creates a user called `okserver`, and copies the files over to the user's home directory `/home/okserver/http/` along with the env file.
 
 ### `systemD`
+**(THIS FEATURE IS CURRENTLY BEING WORKED ON RIGHT NOW. IT DOESN'T WORK.)**
 If you wish to use `systemD`, see included service file, make any desired changes 
 and install it.
 
