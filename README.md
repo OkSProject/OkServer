@@ -10,7 +10,7 @@ _OkServer!_, or _OkS!_ for short, is a Go-based HTTP web server aimed to be ligh
 
 ## Installation
 **(THIS FEATURE IS CURRENTLY BEING WORKED ON RIGHT NOW. IT'S NOT RECOMMENDED YOU RUN THIS UNTIL IT'S BEEN TESTED AND FIXED. INSTRUCTIONS WILL BE UPDATED IF NEEDED.)**
-Before running `make`, create a user named `okserver` that will run *OkS!*.
+<p>Before running `make`, create a user named `okserver` that will run *OkS!*.</p>
     
     useradd -m okserver -s /bin/bash
 
