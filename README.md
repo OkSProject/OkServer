@@ -10,7 +10,8 @@ _OkServer!_, or _OkS!_ for short, is a Go-based HTTP web server aimed to be ligh
 
 ## Installation
 **(THIS FEATURE IS CURRENTLY BEING WORKED ON RIGHT NOW. IT'S NOT RECOMMENDED YOU RUN THIS UNTIL IT'S BEEN TESTED AND FIXED. INSTRUCTIONS WILL BE UPDATED IF NEEDED.)**
-<p>Before running `make`, create a user named `okserver` that will run *OkS!*.</p>
+<br>
+Before running `make`, create a user named `okserver` that will run *OkS!*.
     
     useradd -m okserver -s /bin/bash
 
@@ -22,8 +23,9 @@ This creates a user called `okserver`, and copies the files over to the user's h
 
 ### `systemD`
 **(THIS FEATURE IS CURRENTLY BEING WORKED ON RIGHT NOW. IT DOESN'T WORK.)**
-<P>If you wish to use `systemD`, see included service file, make any desired changes 
-and install it.</P>
+<br>
+If you wish to use `systemD`, see included service file, make any desired changes 
+and install it.
 
     sudo cp deployment/okserver.service /etc/systemd/system/
     sudo systemctl daemon-reload
