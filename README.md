@@ -15,8 +15,8 @@ This creates a user called `okserver`, and copies the files over to the user's h
 
 ### `systemD`
 **(THIS FEATURE IS CURRENTLY BEING WORKED ON RIGHT NOW. IT DOESN'T WORK.)**
-If you wish to use `systemD`, see included service file, make any desired changes 
-and install it.
+<P>If you wish to use `systemD`, see included service file, make any desired changes 
+and install it.</P>
 
     sudo cp deployment/okserver.service /etc/systemd/system/
     sudo systemctl daemon-reload
