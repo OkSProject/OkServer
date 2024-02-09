@@ -4,7 +4,7 @@ After=network.service
 
 [Service]
 User=okserver
-ExecStart=/usr/bin/okserver
+ExecStart=/home/okserver/http/run.sh
 EnvironmentFile=/home/okserver/http/env
 RestartSec=10
 Restart=always
