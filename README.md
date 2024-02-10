@@ -1,5 +1,5 @@
 # OkServer!
-_OkServer!_, or _OkS!_ for short, is a Go-based HTTP web server aimed to be lightweight, clean, and straightforward.
+_OkServer!_, or _OkS!_ for short, is a Go-based HTTP server aiming to be lightweight, clean, and straightforward.
 <img src="OkS.svg" width="300px" />
 
 ## Development
