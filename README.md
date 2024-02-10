@@ -21,11 +21,16 @@ Before creating the systemD service, create a user named `okserver` that will ru
     
     useradd -m okserver -s /bin/bash
     sudo -i -u okserver
+    wget "https://github.com/OkSProject/OkServer/releases/download/(LATEST RELEASE TAG)/(LATEST RELEASE TAR FILE).tar.gz"
+    tar -xf (LATEST RELEASE TAR FILE).tar.gz
+    mv ./(LATEST RELEASE TAR FILE) ./http
 
-If you wish to use `systemD`, see included service file, make any desired changes 
-and install it.
+The placeholders needs to be replaced with whatever is on the releases section of the repo.
 
-    sudo cp deployment/okserver.service /etc/systemd/system/
+If you wish to use `systemD`, see included service file. After making your desired changes, copy the service file to the main directiory and create a symbolic link to systemD.
+
+    cp deployment/okserver.service ./okserver.service
+    ln -s /home/okserver/http/okserver.service /etc/systemd/system/okserver.service
     sudo systemctl daemon-reload
     sudo systemctl enable okserver.service
     sudo systemctl start okserver.service
