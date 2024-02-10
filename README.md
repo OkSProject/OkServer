@@ -25,7 +25,7 @@ Before creating the systemD service, create a user named `okserver` that will ru
     cd http
     wget "https://github.com/OkSProject/OkServer/releases/download/(LATEST RELEASE TAG)/(LATEST RELEASE TAR FILE).tar.gz"
     tar -xf (LATEST RELEASE TAR FILE).tar.gz
-    mv ./(LATEST RELEASE TAR FILE) ./http
+    rm -r (LATEST RELEASE TAR FILE).tar.gz
 
 The placeholders needs to be replaced with whatever is on the releases section of the repo.
 
