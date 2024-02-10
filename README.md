@@ -12,14 +12,16 @@ _OkServer!_, or _OkS!_ for short, is a Go-based HTTP web server aimed to be ligh
 <br>
 
     make && sudo make install
-    okserver
-    
-In place of a systemD service, you can run it in the background by adding an ampersand after the executable command:
-    
     okserver &
+    
+As simple as it is to install, you can stop it by running...
+
+    killall okserver
+
 
 ### `systemD`
-**(THIS FEATURE IS CURRENTLY BEING WORKED ON RIGHT NOW. IT DOESN'T WORK DUE TO THE LOG WRITING FEATURE.)**
+**(THIS FEATURE IS CURRENTLY BEING WORKED ON RIGHT NOW. IT DOESN'T WORK.)**
+**It seems like the problem lies in how the symbolic link in /etc/systemd/ is trying to read the log writing feature.**
 <br>
 Before creating the systemD service, create a user named `okserver` that will run *OkS!*.
     
@@ -50,7 +52,6 @@ Configuration is done via environmental variables.
 | `OKSERVER_PORT` | `8080` |
 
 ## To be worked on...
-- Fix systemD service.
 - Serve PHP, Python, and Go files.
 - Ability to manage use/manage database(s).
 - Ability to create .conf files for individual sites.
