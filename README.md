@@ -21,8 +21,7 @@ Before creating the systemD service, create a user named `okserver` that will ru
     
     useradd -m okserver -s /bin/bash
     sudo -i -u okserver
-    mkdir http 
-    cd http
+    mkdir http && cd http
     wget "https://github.com/OkSProject/OkServer/releases/download/(LATEST RELEASE TAG)/(LATEST RELEASE TAR FILE).tar.gz"
     tar -xf (LATEST RELEASE TAR FILE).tar.gz
     rm -r (LATEST RELEASE TAR FILE).tar.gz
