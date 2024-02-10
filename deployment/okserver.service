@@ -5,7 +5,7 @@ After=network.service
 [Service]
 User=okserver
 ExecStart=/home/okserver/http/run.sh
-EnvironmentFile=/home/okserver/http/env
+EnvironmentFile=/home/okserver/http/.env
 RestartSec=10
 Restart=always
 SystemCallArchitectures=native
