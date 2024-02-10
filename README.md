@@ -28,7 +28,7 @@ Before creating the systemD service, create a user named `okserver` that will ru
 
 The placeholders need to be replaced with whatever is on the releases section of the repo.
 
-If you wish to use `systemD`, see included service file. After making your desired changes, copy the service file to the main directiory and create a symbolic link to systemD.
+If you wish to use `systemD`, see included service file. After making your desired changes, copy the service file to the main directiory, then switch to your regular user and create a symbolic link to systemD.
 
     cp deployment/okserver.service ./okserver.service
     ln -s /home/okserver/http/okserver.service /etc/systemd/system/okserver.service
