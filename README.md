@@ -26,7 +26,7 @@ Before creating the systemD service, create a user named `okserver` that will ru
     tar -xf (LATEST RELEASE TAR FILE).tar.gz
     rm -r (LATEST RELEASE TAR FILE).tar.gz
 
-The placeholders needs to be replaced with whatever is on the releases section of the repo.
+The placeholders need to be replaced with whatever is on the releases section of the repo.
 
 If you wish to use `systemD`, see included service file. After making your desired changes, copy the service file to the main directiory and create a symbolic link to systemD.
 
