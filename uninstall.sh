@@ -1,6 +1,6 @@
 #!/bin/bash
-rm -r /etc/systemd/system/okserver.service
-deluser okserver
-rm -r /home/okserver
-rm -r /usr/bin/okserver
-rm -r /bin/okserver
+rm -r /etc/systemd/system/oksi-http.service
+deluser oksihttp
+rm -r /home/oksihttp
+rm -r /usr/bin/oksi-http
+rm -r /bin/oksi-http

@@ -3,9 +3,9 @@ Description=OkS! HTTP Server
 After=network.service
 
 [Service]
-User=okserver
-ExecStart=/home/okserver/http/run.sh
-EnvironmentFile=/home/okserver/http/.env
+User=oksihttp
+ExecStart=/home/oksihttp/http/run.sh
+EnvironmentFile=/home/oksihttp/http/.env
 RestartSec=10
 Restart=always
 SystemCallArchitectures=native
