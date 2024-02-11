@@ -36,7 +36,7 @@ The placeholders need to be replaced with whatever is on the releases section of
 
 If you wish to use `systemD`, see included service file. After making your desired changes, copy the service file to the main directiory, then switch to your regular user and create a symbolic link to systemD.
 
-    cp deployment/oksi-http.service ./okserver.service
+    cp deployment/oksi-http.service ./oksi-http.service
     ln -s /home/oksihttp/http/oksi-http.service /etc/systemd/system/oksi-http.service
     sudo systemctl daemon-reload
     sudo systemctl enable oksi-http.service
