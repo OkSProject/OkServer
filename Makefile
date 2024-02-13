@@ -4,10 +4,10 @@ export
 all: build
 .PHONY: run
 
-build: main.go
-	go build -o bin/oksi-http main.go
+build: oksi-http.go
+	go build -o bin/oksi-http oksi-http.go
 run:
 	go run main.go
 install:
-	go build -o bin/oksi-http main.go
+	go build -o bin/oksi-http oksi-http.go
 	cp bin/oksi-http /usr/bin

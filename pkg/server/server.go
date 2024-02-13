@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"os"
 
-	"example.com/hello/pkg/config"
+	"github.com/OkSProject/OkServer/pkg/config"
 )
 
 func Run() {

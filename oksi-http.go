@@ -18,9 +18,7 @@
 
 package main
 
-import (
-	"example.com/hello/pkg/server"
-)
+import "github.com/OkSProject/OkServer/pkg/server"
 
 func main() {
 	server.Run()
