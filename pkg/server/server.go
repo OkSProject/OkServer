@@ -26,7 +26,13 @@ func Run() {
 
 	// Serves site(s) from directory "/".
 	fileServer := http.FileServer(http.Dir(config.GetAssetDir()))
+	mod_php := modules.mod_php()
+	mod_py := modules.mod_py()
+	mod_go := modules.mod_go()
 	http.Handle("/", fileServer)
+	http.HandleFunc("/php/", mod_php)
+	http.HandleFunc("/py/", mod_py)
+	http.HandleFunc("/go/", mod_go)
 
 	port := config.GetListenPort()
 	log.Printf("OkS! Running on :%s...\n", port)
