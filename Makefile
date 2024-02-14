@@ -7,7 +7,7 @@ all: build
 build: oksi-http.go
 	go build -o bin/oksi-http oksi-http.go
 run:
-	go run main.go
+	go run oksi-http.go
 install:
 	go build -o bin/oksi-http oksi-http.go
 	cp bin/oksi-http /usr/bin

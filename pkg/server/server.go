@@ -25,7 +25,7 @@ func Run() {
 	log.SetOutput(io.MultiWriter(logFile, os.Stdout))
 
 	// Serves site(s) from directory "/".
-	fileServer := http.FileServer(http.Dir(config.GetAssetDir()))
+	fileServer := http.FileServer(http.Dir(config.GetRootDir()))
 	http.Handle("/", fileServer)
 
 	port := config.GetListenPort()

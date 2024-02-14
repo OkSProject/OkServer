@@ -1,0 +1,3 @@
+default:
+  domain: "http://localhost"
+  root: "./www/html/"
