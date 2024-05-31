@@ -57,4 +57,4 @@ Configuration is done via environmental variables.
 - Ability to create .conf files for individual sites.
 
 ## Credits
-_OkServer!_ and the _OkS!_ Project were started by Cole Rathbun (@cbrbygones), and is licensed under GPLv3 for anyone to use, modify, and redistribute.
+_OkServer!_ and the _OkS!_ Project were started by @cbrbygones, and is licensed under GPLv3 for anyone to use, modify, and redistribute.
